@@ -21,7 +21,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         mainView.layer.cornerRadius = 10
+        mainView.backgroundColor = UIColor(red:CGFloat(sliderForRed.value) / 255, green: CGFloat(sliderForRed.value)/255, blue: CGFloat(sliderForBlue.value)/255, alpha: 1)
         
         sliderForBlue.value = 0.5
         sliderForBlue.minimumValue = 0
