@@ -23,7 +23,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         mainView.layer.cornerRadius = 10
-        mainView.backgroundColor = UIColor(red:CGFloat(sliderForRed.value) / 255, green: CGFloat(sliderForRed.value)/255, blue: CGFloat(sliderForBlue.value)/255, alpha: 1)
         
         sliderForBlue.value = 0.5
         sliderForBlue.minimumValue = 0
@@ -39,13 +38,16 @@ class ViewController: UIViewController {
     }
     @IBAction func greenSliderAction() {
         valueForGreen.text = String(format: "%.2f", sliderForGreen.value)
+        mainView.backgroundColor = UIColor(red:CGFloat(sliderForRed.value), green: CGFloat(sliderForGreen.value), blue: CGFloat(sliderForBlue.value), alpha: 1)
     }
 
     @IBAction func redSliderAction() {
         valueForRed.text = String(format: "%.2f", sliderForRed.value)
+        mainView.backgroundColor = UIColor(red:CGFloat(sliderForRed.value), green: CGFloat(sliderForGreen.value), blue: CGFloat(sliderForBlue.value), alpha: 1)
     }
     @IBAction func blueSliderAction() {
         valueforBlue.text = String(format: "%.2f", sliderForBlue.value)
+        mainView.backgroundColor = UIColor(red:CGFloat(sliderForRed.value), green: CGFloat(sliderForGreen.value), blue: CGFloat(sliderForBlue.value), alpha: 1)
 }
     
 }
